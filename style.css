@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #444;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0 2rem;
+  justify-content: space-between;
+}
+
+.nav.loged {
+  background: white;
+}
+.wellcome {
+  font-size: 30px;
+  font-weight: 600;
+  color: black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: all 1s;
+}
+.nav.loged .logo {
+  filter: invert(0);
+}
+.logo {
+  height: 55px;
+  width: 58px;
+}
+
+.login_input {
+  width: 80px;
+  padding: 5px 10px;
+  margin: 5px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid rgb(44, 44, 44);
+}
+.login_btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+}
+.app {
+  position: relative;
+  max-width: 100rem;
+  margin: 8rem auto;
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  grid-template-rows: auto repeat(3, 15rem) auto;
+  gap: 2rem;
+  /* NOTE This creates the fade in/out anumation */
+  opacity: 0;
+  transition: all 1s;
+}
+
+.ballance {
+  grid-column: 1 / span 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.ballance_lable {
+  font-size: 3rem;
+  color: #444;
+}
+.ballance_date {
+  font-size: 1.8rem;
+  text-align: center;
+}
+.balance_value {
+  font-size: 3rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.movements {
+  grid-row: 2 / span 3;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow-y: scroll;
+}
+.movements-row {
+  padding: 2.25rem 4rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.movements_type {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #fff;
+  padding: 0.1rem 1rem;
+  border-radius: 10rem;
+  margin-right: 2rem;
+}
+.movements_date {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #666;
+}
+.movement_types--deposist {
+  background-image: linear-gradient(to top left, #39b385, #9be15d);
+}
+.movement_types--withdrawal {
+  background-color: #e52a5a;
+}
+.movement_value {
+  font-size: 1.7rem;
+  margin-left: auto;
+}
+.summary {
+  grid-row: 5/6;
+  display: flex;
+  align-items: baseline;
+  padding: 0 0.3rem;
+  margin-top: 1rem;
+}
+.summary__label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 0.8rem;
+}
+.summary__value {
+  font-size: 2.2rem;
+  margin-right: 2.5rem;
+}
+.summary__value--in,
+.summary__value--interest {
+  color: #66c873;
+}
+
+.summary__value--out {
+  color: #f5465d;
+}
+.btn--sort {
+  border: none;
+  background: none;
+  font-size: 2.1rem;
+  margin-left: auto;
+  font-weight: 300;
+  cursor: pointer;
+}
+.apration {
+  border-radius: 1rem;
+  padding: 3rem 4rem;
+  color: #333;
+}
+.opration--transfer {
+  background-image: linear-gradient(to top left, #ffb003, #ffcb03);
+}
+.opration--loan {
+  background-image: linear-gradient(to top left, #39b385, #9be15d);
+}
+.opration--close {
+  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333;
+}
+.form {
+  display: grid;
+  grid-template-columns: 2.5fr 2.5fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.4rem 1rem;
+}
+.form.form--loan {
+  grid-template-columns: 2.5fr 1fr 2.5fr;
+}
+
+.form_lable--loan {
+  grid-row: 2;
+}
+
+.form_input {
+  width: 100%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-family: inherit;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+  padding: 0.3rem 1rem;
+  border-radius: 0.7rem;
+  transition: all 0.3s;
+}
+.form_input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.form_lable {
+  font-size: 15px;
+  text-align: center;
+}
+.form_btn {
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 1.8rem;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.logout-timer {
+  padding: 0 0.3rem;
+  margin-top: 1.9rem;
+  text-align: right;
+  font-size: 1.25rem;
+}
+
+.timer {
+  font-weight: 600;
+}

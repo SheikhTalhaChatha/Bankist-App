@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bankist App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav loged">
+      <p class="wellcome">Log in get started</p>
+      <img src="/logo.png" alt="logo" class="logo" />
+      <form class="login">
+        <input
+          type="text"
+          placeholder="User"
+          class="login_input login__input--user"
+          required
+        />
+
+        <input
+          type="pin"
+          placeholder="Pin"
+          class="login_input login__input--pin"
+          required
+        />
+        <button type="submit" class="login_btn">&rarr;</button>
+      </form>
+    </nav>
+
+    <main class="app">
+      <div class="ballance">
+        <div>
+          <p class="ballance_lable">Current balance</p>
+          <p class="ballance_date">
+            As of <span class="date">05/03/2037</span>
+          </p>
+        </div>
+        <p class="balance_value">0000€</p>
+      </div>
+
+      <div class="movements">
+        <div class="movements-row">
+          <div class="movements_type movement_types--deposist">2 deposit</div>
+          <div class="movements_date">3 day ago</div>
+          <div class="movement_value">4 0000€</div>
+        </div>
+        <div class="movements-row">
+          <div class="movements_type movement_types--withdrawal">
+            1 withdrawal
+          </div>
+          <div class="movements_date">24/01/2037</div>
+          <div class="movement_value">-378€</div>
+        </div>
+      </div>
+
+      <div class="summary">
+        <p class="summary__label">In</p>
+        <p class="summary__value summary__value--in">0000€</p>
+        <p class="summary__label">Out</p>
+        <p class="summary__value summary__value--out">0000€</p>
+        <p class="summary__label">Interest</p>
+        <p class="summary__value summary__value--interest">0000€</p>
+        <button class="btn--sort">&downarrow; SORT</button>
+      </div>
+      <!-- input by trancewar mony  -->
+
+      <div class="apration opration--transfer">
+        <h2>Transfer mony</h2>
+        <form class="form form--transfer">
+          <input type="text" class="form_input form_input--to" />
+
+          <input type="number" class="form_input form_input--amount" main="0" />
+          <button type="submit" class="form_btn form_btn---transfer">
+            &rarr;
+          </button>
+          <label class="form_lable">Transfer to</label>
+          <label class="form_lable">Amount</label>
+        </form>
+      </div>
+      <div class="apration opration--loan">
+        <h2>Request loan</h2>
+        <form class="form form--loan">
+          <input
+            type="number"
+            class="form_input form_input--loan-amount"
+            main="0"
+          />
+          <button type="submit" class="form_btn form_btn---loan">&rarr;</button>
+          <label class="form_lable form_lable--loan">Amount</label>
+        </form>
+      </div>
+      <div class="apration opration--close">
+        <h2>Close account</h2>
+        <form class="form form--close">
+          <input type="text" class="form_input form_input--user" />
+          <input
+            type="password"
+            maxlength="6"
+            class="form_input form_input--pin"
+          />
+          <button type="submit" class="form_btn form_btn---close">
+            &rarr;
+          </button>
+          <label class="form_lable">confrim User</label>
+          <label class="form_lable">confrim pin</label>
+        </form>
+      </div>
+      <p class="logout-timer">
+        You will be logged out in <span class="timer">05:00</span>
+      </p>
+    </main>
+    <!-- java script here -->
+
+    <script src="/index.js"></script>
+  </body>
+</html>
